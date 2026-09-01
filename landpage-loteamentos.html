@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eduard Schmidt | Consultoria em Loteamentos no Sul do Brasil</title>
+    <meta
+      name="description"
+      content="Consultoria especializada em loteamentos no Sul do Brasil. Entenda documentação, valorização real, infraestrutura e tome a decisão certa antes de comprar seu lote."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-canopy-green: #0a3922;
+        --color-coral-pulse: #ff643b;
+        --color-indigo-bloom: #460095;
+        --color-leaf-bright: #1dbf73;
+        --color-deep-teal: #003642;
+        --color-orchid-tint: #f3b3fe;
+        --color-sky-signal: #00b4dc;
+        --color-aubergine: #47264c;
+        --color-ink-black: #000000;
+        --color-paper-white: #ffffff;
+        --color-ash: #a6a6a6;
+        --color-slate: #7a7a7a;
+        --color-graphite: #3d3d3d;
+        --color-charcoal: #333333;
+        --color-frost-gray: #e0e0e0;
+        --color-cloud-gray: #f2f2f2;
+        --color-lavender-mist: #eee2ff;
+        --color-mint-wash: #d2f2e3;
+        --color-sky-wash: #ccf0f8;
+        --color-sage-wash: #e4f7ee;
+        --color-lilac-wash: #fdf0ff;
+        --color-peach-wash: #ffede8;
+        --color-cream: #faf7e8;
+        --color-sand: #f4ece9;
+        --font-dm-sans: "DM Sans", "Segoe UI", sans-serif;
+        --text-body: 16px;
+        --text-body-lg: 18px;
+        --text-subheading: 20px;
+        --text-heading: 32px;
+        --text-heading-lg: 48px;
+        --text-display: 72px;
+        --page-max-width: 1280px;
+        --section-gap: 64px;
+        --card-padding: 24px;
+        --radius-cards: 24px;
+        --radius-buttons: 40px;
+        --radius-tags: 9999px;
+        --shadow-subtle: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--color-lavender-mist);
+        color: var(--color-ink-black);
+        font-family: var(--font-dm-sans);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      img { max-width: 100%; display: block; }
+      a { text-decoration: none; }
+      p, li, h1, h2, h3 { margin: 0; }
+
+      .container {
+        max-width: var(--page-max-width);
+        width: calc(100% - 64px);
+        margin: 0 auto;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 52px;
+        padding: 12px 24px;
+        border-radius: var(--radius-buttons);
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid transparent;
+        transition: 0.2s ease;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .btn-primary {
+        background: var(--color-coral-pulse);
+        color: var(--color-paper-white);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--color-paper-white);
+        border-color: rgba(255,255,255,0.75);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--color-ink-black);
+        border-color: rgba(0,0,0,0.8);
+      }
+
+      .nav-wrap {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0,0,0,0.04);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 82px;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        color: var(--color-canopy-green);
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--color-canopy-green);
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: var(--color-canopy-green);
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        color: var(--color-canopy-green);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .lang {
+        font-size: 14px;
+        color: var(--color-canopy-green);
+        font-weight: 500;
+      }
+
+      .header-btn {
+        background: #fff;
+        color: var(--color-canopy-green);
+        border: 1px solid rgba(0,0,0,0.8);
+        min-height: 42px;
+        padding: 8px 20px;
+        border-radius: 40px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .hero {
+        background: var(--color-canopy-green);
+        color: white;
+        padding: 60px 0 70px;
+        overflow: hidden;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: var(--radius-tags);
+        background: rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.9);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 5vw, 80px);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        max-width: 620px;
+        font-weight: 500;
+        color: white;
+      }
+
+      .hero h1 .accent {
+        color: var(--color-leaf-bright);
+      }
+
+      .hero-sub {
+        font-size: var(--text-body-lg);
+        line-height: 1.5;
+        color: rgba(210,242,227,0.9);
+        max-width: 560px;
+        margin-top: 22px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .portrait-wrap {
+        position: relative;
+        width: min(100%, 530px);
+        height: 720px;
+      }
+
+      .portrait-card {
+        position: absolute;
+        inset: 0;
+        border-radius: 34px;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.12));
+      }
+
+      .portrait-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.75) contrast(1.08) brightness(0.9);
+      }
+
+      .phone-mock {
+        position: absolute;
+        right: -8px;
+        bottom: 14px;
+        width: 260px;
+        background: #fff;
+        border-radius: 28px;
+        padding: 14px 12px 10px;
+        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: var(--shadow-subtle);
+      }
+
+      .phone-header {
+        background: var(--color-canopy-green);
+        color: white;
+        border-radius: 18px 18px 10px 10px;
+        padding: 12px 14px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .chat-area {
+        padding-top: 12px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .bubble {
+        display: inline-block;
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.45;
+        max-width: 92%;
+      }
+
+      .bubble.incoming {
+        background: #f4f4f4;
+        border: 1px solid rgba(0,0,0,0.03);
+        color: var(--color-graphite);
+      }
+
+      .bubble.outgoing {
+        margin-left: auto;
+        background: #dcf8c6;
+        color: #123a2b;
+      }
+
+      .bubble-name {
+        font-weight: 700;
+        color: var(--color-leaf-bright);
+      }
+
+      .floating-tag {
+        position: absolute;
+        left: -14px;
+        top: 118px;
+        background: rgba(29,191,115,0.14);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .stat-bar {
+        background: var(--color-paper-white);
+        border-radius: 24px;
+        padding: 18px 24px;
+        margin: -28px auto 0;
+        position: relative;
+        z-index: 10;
+        width: min(100%, 1020px);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .stat {
+        display: grid;
+        gap: 6px;
+      }
+
+      .stat strong {
+        font-size: 28px;
+        letter-spacing: -0.04em;
+        color: var(--color-canopy-green);
+      }
+
+      .stat span {
+        color: var(--color-slate);
+        font-size: 14px;
+      }
+
+      .section {
+        padding: var(--section-gap) 0;
+      }
+
+      .section-head {
+        text-align: center;
+        max-width: 740px;
+        margin: 0 auto 36px;
+      }
+
+      .section-label {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: var(--radius-tags);
+        background: rgba(70,0,149,0.08);
+        color: var(--color-indigo-bloom);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(34px, 4vw, 58px);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        color: var(--color-canopy-green);
+      }
+
+      .section-head p {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--color-graphite);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .feature-card {
+        border-radius: var(--radius-cards);
+        padding: 32px 28px;
+        min-height: 250px;
+      }
+
+      .feature-card.mint { background: var(--color-mint-wash); }
+      .feature-card.sage { background: var(--color-sage-wash); }
+      .feature-card.sky { background: var(--color-sky-wash); }
+      .feature-card.cream { background: var(--color-cream); }
+      .feature-card.lilac { background: var(--color-lilac-wash); }
+      .feature-card.peach { background: var(--color-peach-wash); }
+
+      .feature-card .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: var(--radius-tags);
+        background: rgba(255,255,255,0.4);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-canopy-green);
+      }
+
+      .feature-card h3 {
+        margin-top: 18px;
+        font-size: clamp(24px, 2.5vw, 32px);
+        letter-spacing: -0.03em;
+        line-height: 1.12;
+        color: var(--color-canopy-green);
+      }
+
+      .feature-card p {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--color-graphite);
+      }
+
+      .feature-card .mini-box {
+        margin-top: 22px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 18px;
+        padding: 16px;
+        min-height: 80px;
+      }
+
+      .problem-wrap {
+        background: rgba(255,255,255,0.45);
+        border-radius: 32px;
+        padding: 32px;
+      }
+
+      .problem-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .problem-copy h2 {
+        font-size: clamp(36px, 4vw, 56px);
+        line-height: 1.02;
+        letter-spacing: -0.05em;
+        color: var(--color-canopy-green);
+      }
+
+      .problem-copy p {
+        margin-top: 18px;
+        color: var(--color-graphite);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .risks {
+        list-style: none;
+        padding: 0;
+        margin: 22px 0 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .risks li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        color: var(--color-charcoal);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .check {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--color-mint-wash);
+        display: grid;
+        place-items: center;
+        color: var(--color-canopy-green);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .risk-card {
+        background: linear-gradient(180deg, #ffffff, #f7f3ff);
+        border-radius: 28px;
+        padding: 28px;
+        border: 1px solid rgba(0,0,0,0.04);
+      }
+
+      .risk-card h3 {
+        font-size: 22px;
+        letter-spacing: -0.03em;
+        color: var(--color-canopy-green);
+      }
+
+      .risk-card ul {
+        margin: 18px 0 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 12px;
+        color: var(--color-graphite);
+        line-height: 1.5;
+      }
+
+      .pillar-band {
+        background: var(--color-indigo-bloom);
+        color: white;
+        padding: 80px 0;
+      }
+
+      .pillar-band .section-head h2,
+      .pillar-band .section-head p,
+      .pillar-band .section-head .section-label {
+        color: white;
+      }
+
+      .pillar-band .section-label {
+        background: rgba(255,255,255,0.08);
+      }
+
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 36px;
+      }
+
+      .pillar {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 24px;
+        padding: 28px;
+      }
+
+      .pillar-num {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.12);
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .pillar h3 {
+        font-size: 26px;
+        letter-spacing: -0.04em;
+        margin-bottom: 10px;
+      }
+
+      .pillar p {
+        color: rgba(255,255,255,0.82);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .profile {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .profile-portrait {
+        position: relative;
+        border-radius: 32px;
+        overflow: hidden;
+        background: #ddd;
+        min-height: 640px;
+      }
+
+      .profile-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .profile-copy h2 {
+        font-size: clamp(36px, 4vw, 56px);
+        line-height: 1.04;
+        letter-spacing: -0.05em;
+        color: var(--color-canopy-green);
+      }
+
+      .profile-copy p {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--color-graphite);
+      }
+
+      .meta-box {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .mini-stat {
+        background: var(--color-sage-wash);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .mini-stat strong {
+        display: block;
+        font-size: 28px;
+        letter-spacing: -0.04em;
+        color: var(--color-canopy-green);
+      }
+
+      .mini-stat span {
+        display: block;
+        margin-top: 8px;
+        color: var(--color-graphite);
+        font-size: 14px;
+      }
+
+      .steps {
+        background: rgba(255,255,255,0.45);
+        border-radius: 30px;
+        padding: 28px;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 32px;
+      }
+
+      .step {
+        padding: 28px 24px;
+        border-radius: 24px;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.04);
+      }
+
+      .step-num {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--color-canopy-green);
+        color: white;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .step h3 {
+        margin-top: 18px;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        color: var(--color-canopy-green);
+      }
+
+      .step p {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--color-graphite);
+      }
+
+      .cta-band {
+        padding: 80px 0 120px;
+      }
+
+      .cta-box {
+        background: var(--color-canopy-green);
+        border-radius: 32px;
+        padding: 48px 44px;
+        display: grid;
+        grid-template-columns: 1.2fr auto;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .cta-box h2 {
+        font-size: clamp(34px, 3.5vw, 52px);
+        letter-spacing: -0.05em;
+        line-height: 1.04;
+        color: white;
+      }
+
+      .cta-box p {
+        margin-top: 12px;
+        color: rgba(255,255,255,0.88);
+        font-size: 18px;
+        max-width: 600px;
+      }
+
+      .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 980px) {
+        .hero-inner,
+        .problem-grid,
+        .profile,
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+
+        .features-grid,
+        .steps-grid,
+        .pillar-grid,
+        .stat-bar,
+        .meta-box {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .portrait-wrap {
+          width: min(100%, 440px);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .container { width: calc(100% - 28px); }
+
+        .nav {
+          min-height: 72px;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .features-grid,
+        .steps-grid,
+        .pillar-grid,
+        .stat-bar,
+        .meta-box {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 38px;
+        }
+
+        .hero-visual {
+          min-height: 480px;
+        }
+
+        .portrait-wrap {
+          height: 580px;
+        }
+
+        .floating-tag {
+          left: 12px;
+          top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-wrap">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <span>Eduard Schmidt</span>
+        </div>
+
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#solucao">Soluções</a>
+          <a href="#mercado">Mercado</a>
+          <a href="#consultor">Consultor</a>
+          <a href="#processo">Processo</a>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="lang">PT</span>
+          <a href="https://wa.me/5548996749181?text=Ol%C3%A1%20Eduard%2C%20quero%20agendar%20uma%20consultoria%20gratuita%20sobre%20loteamentos%20no%20Sul%20do%20Brasil." class="btn header-btn">Agendar reunião</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Consultoria Especializada</div>
+          <h1>O lote certo pode<br />multiplicar seu <span class="accent">patrimônio</span>.</h1>
+          <p class="hero-sub">
+            Comprar um lote sem análise prévia é um risco financeiro. No Sul do Brasil, o erro não está só no preço — está na documentação, na valorização real, na infraestrutura e no match entre o imóvel e o seu objetivo.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5548996749181?text=Ol%C3%A1%20Eduard%2C%20quero%20agendar%20uma%20consultoria%20gratuita%20sobre%20loteamentos%20no%20Sul%20do%20Brasil." class="btn btn-primary">Agendar consultoria gratuita via WhatsApp</a>
+            <a href="#solucao" class="btn btn-secondary">Entenda a consultoria</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Foto do consultor Eduard Schmidt">
+          <div class="floating-tag">Loteamentos</div>
+          <div class="portrait-wrap">
+            <div class="portrait-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Eduard Schmidt em retrato profissional" />
+            </div>
+            <div class="phone-mock" aria-label="Simulação de conversa no WhatsApp">
+              <div class="phone-header">Eduard Schmidt • Online</div>
+              <div class="chat-area">
+                <span class="bubble incoming"><span class="bubble-name">Eduard</span><br />Vamos analisar seu perfil e as melhores oportunidades com segurança.</span>
+                <span class="bubble outgoing">Quero entender qual lote faz sentido para o meu objetivo.</span>
+                <span class="bubble incoming">Perfeito. Vou te orientar com análise técnica e estratégia.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="stat-bar">
+        <div class="stat">
+          <strong>2 anos</strong>
+          <span>de atuação no mercado</span>
+        </div>
+        <div class="stat">
+          <strong>4 pilares</strong>
+          <span>de análise estratégica</span>
+        </div>
+        <div class="stat">
+          <strong>+ regiões</strong>
+          <span>Florianópolis e Sul do Brasil</span>
+        </div>
+        <div class="stat">
+          <strong>WhatsApp</strong>
+          <span>consultoria direta e ágil</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="section" id="mercado">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">O problema do mercado</div>
+            <h2>O maior erro não é comprar um lote.<br />É comprar o lote errado.</h2>
+            <p>O mercado oferece muitas promessas, mas poucas decisões realmente bem feitas.</p>
+          </div>
+
+          <div class="problem-wrap">
+            <div class="problem-grid">
+              <div class="problem-copy">
+                <h2>O que faz o comprador perder dinheiro.</h2>
+                <p>
+                  A maioria das pessoas entra no processo com pressa, emoção e pouco critério. O resultado é uma decisão baseada em aparência, promessa de valorização e excesso de opções — sem olhar para o que realmente importa.
+                </p>
+                <ul class="risks">
+                  <li><span class="check">✓</span> Documentação incompleta ou irregular</li>
+                  <li><span class="check">✓</span> Infraestrutura atrasada ou promessa vazia de desenvolvimento</li>
+                  <li><span class="check">✓</span> Loteamento em região sem demanda real ou com preço inflado</li>
+                  <li><span class="check">✓</span> Falta de análise sobre valorização, risco e objetivos do cliente</li>
+                </ul>
+              </div>
+
+              <div class="risk-card">
+                <h3>Risco real</h3>
+                <ul>
+                  <li>Problemas jurídicos que aparecem depois da compra</li>
+                  <li>Projeto bonito na capa, mas fraco em rentabilidade</li>
+                  <li>Valorização que não se sustenta no mercado</li>
+                  <li>Decisão emocional em vez de estratégia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="solucao">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">A solução</div>
+            <h2>Consultoria técnica, estratégica e focada no patrimônio do cliente.</h2>
+            <p>Não é venda por impulso. É orientação baseada em análise real, transparência e clareza.</p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card mint">
+              <div class="tag">Pilar 01</div>
+              <h3>Documentação & registro</h3>
+              <p>Além do preço, a segurança jurídica é o primeiro filtro. Sem isso, a oportunidade perde valor.</p>
+              <div class="mini-box"></div>
+            </article>
+
+            <article class="feature-card sage">
+              <div class="tag">Pilar 02</div>
+              <h3>Valorização real</h3>
+              <p>A compra certa não é a mais barata. É a que apresenta potencial de crescimento com base real.</p>
+              <div class="mini-box"></div>
+            </article>
+
+            <article class="feature-card sky">
+              <div class="tag">Pilar 03</div>
+              <h3>Infraestrutura & qualidade de vida</h3>
+              <p>O Sul do Brasil se destaca pela qualidade de vida e pelo padrão de desenvolvimento. Isso precisa ser medido.</p>
+              <div class="mini-box"></div>
+            </article>
+
+            <article class="feature-card cream">
+              <div class="tag">Pilar 04</div>
+              <h3>Match com o seu perfil</h3>
+              <p>Nem todo lote serve para todo cliente. O melhor imóvel é o que combina com o seu objetivo.</p>
+              <div class="mini-box"></div>
+            </article>
+
+            <article class="feature-card lilac">
+              <div class="tag">Estratégia</div>
+              <h3>Decisão com olhar longo prazo</h3>
+              <p>O papel do consultor é proteger o patrimônio e ajudar você a agir com clareza, não com impulsividade.</p>
+              <div class="mini-box"></div>
+            </article>
+
+            <article class="feature-card peach">
+              <div class="tag">Resultado</div>
+              <h3>Oportunidade com segurança</h3>
+              <p>Você compra com critérios, entende os riscos e toma uma decisão que faz sentido para você.</p>
+              <div class="mini-box"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pillar-band">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">Análise em 4 pilares</div>
+            <h2>O consultor que faz a diferença na sua decisão.</h2>
+          </div>
+
+          <div class="pillar-grid">
+            <article class="pillar">
+              <div class="pillar-num">01</div>
+              <h3>Análise de documentação & registro</h3>
+              <p>Verificação da regularidade do loteamento, documentação, cronograma e consistência jurídica antes de qualquer decisão.</p>
+            </article>
+
+            <article class="pillar">
+              <div class="pillar-num">02</div>
+              <h3>Potencial de valorização</h3>
+              <p>Avaliação de crescimento da região, demanda real, cenário econômico e oportunidades que entregam retorno consistente.</p>
+            </article>
+
+            <article class="pillar">
+              <div class="pillar-num">03</div>
+              <h3>Infraestrutura & qualidade de vida</h3>
+              <p>O Sul do Brasil tem um diferencial claro. A análise considera mobilidade, serviços, entorno e padrão de desenvolvimento.</p>
+            </article>
+
+            <article class="pillar">
+              <div class="pillar-num">04</div>
+              <h3>Match com o seu objetivo</h3>
+              <p>Sua compra precisa ter sentido para o seu perfil: morar, investir, construir ou buscar valorização a longo prazo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="consultor">
+        <div class="container profile">
+          <div class="profile-portrait">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Retrato profissional do consultor Eduard Schmidt" />
+          </div>
+
+          <div class="profile-copy">
+            <div class="section-label">Sobre o consultor</div>
+            <h2>Autoridade com transparência e foco no patrimônio do cliente.</h2>
+            <p>
+              Com <strong>2 anos de experiência</strong>, <strong>Eduard Schmidt</strong> atua em <strong>Florianópolis, Grande Florianópolis, Sul Catarinense e Grande Porto Alegre</strong>, ajudando investidores, construtores e compradores a escolher melhor.
+            </p>
+            <p>
+              Sua atuação é guiada por um princípio simples: a compra certa não é a que parece mais atraente na primeira impressão — é a que entrega segurança, potencial real e alinhamento com seus objetivos.
+            </p>
+
+            <div class="meta-box">
+              <div class="mini-stat">
+                <strong>2 anos</strong>
+                <span>no mercado</span>
+              </div>
+              <div class="mini-stat">
+                <strong>4 regiões</strong>
+                <span>em atuação</span>
+              </div>
+              <div class="mini-stat">
+                <strong>1 foco</strong>
+                <span>patrimônio com clareza</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="processo">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-label">Como funciona</div>
+            <h2>Um atendimento simples, estratégico e pensado para sua decisão.</h2>
+          </div>
+
+          <div class="steps">
+            <div class="steps-grid">
+              <div class="step">
+                <div class="step-num">1</div>
+                <h3>Entendimento do perfil</h3>
+                <p>Você me conta seu objetivo, seu contexto e o que você busca com a compra do lote.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">2</div>
+                <h3>Curadoria das melhores opções</h3>
+                <p>Seleciono oportunidades relevantes com base no seu perfil, no mercado e no seu objetivo.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">3</div>
+                <h3>Relatório e visita guiada</h3>
+                <p>Você recebe uma análise real das melhores oportunidades e pode decidir com muito mais clareza.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <h2>Loteamento não é compra por impulso. É decisão estratégica.</h2>
+              <p>Se você quer comprar com segurança, entender o mercado e reduzir riscos antes de fechar, a consultoria certa é a que te ajuda a decidir com clareza.</p>
+            </div>
+
+            <div class="cta-actions">
+              <a href="https://wa.me/5548996749181?text=Ol%C3%A1%20Eduard%2C%20quero%20agendar%20uma%20consultoria%20gratuita%20sobre%20loteamentos%20no%20Sul%20do%20Brasil." class="btn btn-primary">Agendar consultoria</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

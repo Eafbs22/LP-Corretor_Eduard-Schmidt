@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villagio Salomão - Forquilhas, São José SC</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html { height: 100%; font-family: 'Trebuchet MS', Arial, sans-serif; background: #dfe7e5; color: #102b2a; }
+    .post-card {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #f4f5f0;
+    }
+    .project-photo {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto;
+      width: 100%;
+      height: 650px;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(1.05) contrast(1.03);
+    }
+    .project-fallback {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 650px;
+      display: grid;
+      place-items: center;
+      padding: 70px;
+      background: linear-gradient(135deg, #2c6a64, #b7cda8 55%, #e4d5aa);
+      color: rgba(255,255,255,.85);
+      font-size: 20px;
+      letter-spacing: .12em;
+      text-align: center;
+    }
+    .content {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      height: 100%;
+      padding: 72px 72px 54px;
+      align-content: start;
+      justify-items: start;
+    }
+    .tag {
+      display: inline-flex;
+      padding: 12px 18px;
+      border-radius: 4px;
+      background: #d3e56b;
+      color: #173c39;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+    .title {
+      margin-top: 255px;
+      font-size: 82px;
+      line-height: .9;
+      letter-spacing: 0;
+      max-width: 850px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: #fff;
+    }
+    .subtitle {
+      margin-top: 18px;
+      padding: 12px 18px;
+      background: #d3e56b;
+      color: #173c39;
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .information {
+      position: absolute;
+      z-index: 3;
+      left: 72px;
+      right: 72px;
+      bottom: 42px;
+      min-height: 300px;
+      padding: 38px 390px 30px 42px;
+      background: #f4f5f0;
+      border-top: 10px solid #d3e56b;
+    }
+    .information h2 {
+      font-size: 34px;
+      line-height: 1.05;
+      color: #102b2a;
+      margin-bottom: 18px;
+    }
+    .information p {
+      font-size: 23px;
+      line-height: 1.4;
+      color: #42615c;
+    }
+    .consultant {
+      position: absolute;
+      z-index: 4;
+      right: 72px;
+      bottom: 42px;
+      width: 310px;
+      height: 400px;
+      object-fit: cover;
+      object-position: center top;
+      border: 12px solid #f4f5f0;
+      box-shadow: 12px 12px 0 #d3e56b;
+    }
+    .signature {
+      position: absolute;
+      z-index: 5;
+      right: 92px;
+      bottom: 64px;
+      width: 260px;
+      padding: 14px 16px;
+      background: rgba(16,43,42,.9);
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .signature strong {
+      display: block;
+      color: #d3e56b;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+    .post-card {
+      width: 1080px;
+      height: 1350px;
+      background: #f4f5f0;
+    }
+    .project-photo {
+      display: block;
+      z-index: 0;
+      height: 790px;
+    }
+    .project-fallback { display: none; }
+    .project-photo::after { display: none; }
+    .content {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 790px;
+      padding: 64px 72px;
+    }
+    .content::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(8,35,34,.46), transparent 48%, rgba(8,35,34,.82));
+    }
+    .title {
+      position: absolute;
+      top: 348px;
+      left: 72px;
+      margin: 0;
+      font-size: 88px;
+      text-shadow: 0 4px 24px rgba(0,0,0,.2);
+    }
+    .tag { position: absolute; top: 64px; left: 72px; }
+    .subtitle { position: absolute; top: 572px; left: 72px; margin: 0; }
+    .information {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 560px;
+      padding: 76px 430px 58px 72px;
+      border-top: 0;
+      background: #f4f5f0;
+    }
+    .information::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 72px;
+      width: 96px;
+      height: 9px;
+      background: #d3e56b;
+    }
+    .information h2 { font-size: 42px; }
+    .information p { font-size: 25px; }
+    .consultant {
+      right: 72px;
+      bottom: 92px;
+      width: 300px;
+      height: 360px;
+      border: 10px solid #f4f5f0;
+      box-shadow: 12px 12px 0 #d3e56b;
+    }
+    .signature {
+      right: 92px;
+      bottom: 110px;
+      width: 260px;
+      padding: 13px 14px;
+      font-size: 17px;
+    }
+    .brand-crop {
+      position: absolute;
+      z-index: 4;
+      top: 54px;
+      right: 72px;
+      width: 300px;
+      height: 72px;
+      overflow: hidden;
+      background: rgba(255,255,255,.9);
+      border-left: 8px solid #d3e56b;
+    }
+    .brand-crop img {
+      width: 520px;
+      height: 520px;
+      object-fit: cover;
+      object-position: 39% 33%;
+      transform: translate(-54px, -132px);
+    }
+    .post-card {
+      height: 1350px;
+      background: #f4f5f0;
+    }
+    .project-photo {
+      height: 760px;
+      object-position: center center;
+    }
+    .content {
+      height: 760px;
+      z-index: 3;
+    }
+    .content::after {
+      background: linear-gradient(180deg, rgba(8,35,34,.18), transparent 36%, rgba(8,35,34,.56));
+    }
+    .title {
+      top: 350px;
+      color: #0b4d32;
+      background: rgba(244,245,240,.92);
+      padding: 12px 20px 16px;
+      text-shadow: none;
+    }
+    .subtitle { top: 590px; }
+    .information {
+      bottom: 0;
+      min-height: 590px;
+      padding: 82px 430px 56px 72px;
+      z-index: 2;
+      background: #f4f5f0;
+    }
+    .propaganda-panel {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 590px;
+      overflow: hidden;
+      background: #e9eee4;
+    }
+    .propaganda-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      opacity: .18;
+    }
+    .consultant {
+      right: 72px;
+      bottom: 96px;
+      width: 300px;
+      height: 370px;
+      z-index: 5;
+    }
+    .signature {
+      right: 92px;
+      bottom: 116px;
+      z-index: 6;
+    }
+    .brand-crop { display: none; }
+    .post-card {
+      height: 1350px;
+      background: #f8faf7;
+    }
+    .project-photo {
+      height: 760px;
+      object-position: center center;
+      filter: saturate(.94) contrast(1.04);
+    }
+    .content {
+      height: 760px;
+      padding: 58px 72px;
+    }
+    .content::after {
+      background: linear-gradient(180deg, rgba(12,49,35,.22), transparent 42%, rgba(12,49,35,.58));
+    }
+    .tag {
+      top: 58px;
+      left: 72px;
+      background: rgba(255,255,255,.58);
+      color: #174b35;
+      border: 1px solid rgba(255,255,255,.62);
+      box-shadow: 0 8px 22px rgba(12,49,35,.12);
+      backdrop-filter: blur(9px);
+    }
+    .title {
+      top: 338px;
+      left: 72px;
+      color: #125238;
+      background: rgba(255,255,255,.62);
+      padding: 10px 20px 16px;
+      text-shadow: none;
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: 0 12px 28px rgba(12,49,35,.14);
+      backdrop-filter: blur(10px);
+    }
+    .subtitle {
+      top: 580px;
+      left: 72px;
+      background: rgba(23,75,53,.72);
+      color: #fff;
+      border-left: 8px solid #8abf8b;
+      border-top: 1px solid rgba(255,255,255,.24);
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 24px rgba(12,49,35,.18);
+      backdrop-filter: blur(10px);
+    }
+    .information {
+      top: auto;
+      bottom: auto;
+      bottom: 34px;
+      height: 150px;
+      min-height: 0;
+      left: 58px;
+      right: auto;
+      width: 650px;
+      padding: 18px 28px 16px 32px;
+      background: rgba(248,250,247,.66);
+      border: 1px solid rgba(255,255,255,.7);
+      border-left: 8px solid #2f7350;
+      border-top: 1px solid rgba(255,255,255,.7);
+      box-shadow: 0 16px 40px rgba(12,49,35,.11);
+      backdrop-filter: blur(9px);
+      z-index: 3;
+    }
+    .information::before { display: none; }
+    .information h2 {
+      color: #174b35;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .information p {
+      color: #3e6650;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .propaganda-panel {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 590px;
+      display: grid;
+      place-items: center;
+      background: #edf3ec;
+      z-index: 1;
+    }
+    .propaganda-panel img {
+      position: absolute;
+      object-fit: cover;
+      opacity: .92;
+    }
+    .propaganda-main {
+      left: 0;
+      bottom: 0;
+      width: 700px;
+      height: 590px;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .propaganda-whatsapp {
+      display: none;
+    }
+    .propaganda-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(248,250,247,.28), rgba(23,75,53,.08) 65%, rgba(23,75,53,.2));
+    }
+    .consultant {
+      top: 520px;
+      right: 72px;
+      bottom: auto;
+      width: 300px;
+      height: 390px;
+      padding: 14px;
+      object-fit: cover;
+      object-position: center top;
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(255,255,255,.92);
+      box-shadow: 0 18px 42px rgba(12,49,35,.28), 12px 12px 0 rgba(47,115,80,.72);
+      backdrop-filter: blur(12px);
+    }
+    .signature {
+      top: 820px;
+      right: 86px;
+      bottom: auto;
+      width: 272px;
+      background: rgba(23,75,53,.92);
+      color: #fff;
+    }
+    .signature strong { color: #b9d9b3; }
+  </style>
+</head>
+<body>
+  <div class="post-card">
+    <img class="project-photo" src="Fotos Profissional/Villagio_Arte1.jpe" alt="Imagem principal do Villagio Salomão em Forquilhas" />
+    <div class="content">
+      <div class="tag">Um novo lugar em São José</div>
+      <h1 class="title">Villagio<br />Salomão</h1>
+      <p class="subtitle">Forquilhas — São José, SC</p>
+    </div>
+    <section class="information">
+      <h2>Um novo capítulo para Forquilhas.</h2>
+      <p>Um empreendimento que transforma a paisagem e a forma de viver São José.</p>
+    </section>
+    <div class="signature"><strong>Eduard Schmidt</strong>Apresentação do projeto</div>
+  </div>
+</body>
+</html>

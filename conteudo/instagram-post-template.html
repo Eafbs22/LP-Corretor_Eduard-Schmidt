@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Post Instagram - 1080x1920</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html { min-height: 100%; font-family: 'Inter', Arial, sans-serif; background: #111; color: #fff; }
+    .post-card {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 32px;
+      background: #0d1520;
+    }
+    .post-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.82));
+      z-index: 1;
+    }
+    .post-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.94) contrast(1.08) brightness(0.88);
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      height: 100%;
+      gap: 32px;
+      padding: 100px 72px 88px;
+      align-content: start;
+      justify-items: start;
+    }
+    .tag {
+      display: inline-flex;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.1);
+      font-size: 0.75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #eef2ff;
+      width: fit-content;
+    }
+    .title {
+      font-size: clamp(4.6rem, 8vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: -.07em;
+      max-width: 82%;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-top: 18px;
+      color: #f8f9ff;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      max-width: 72%;
+      line-height: 1.65;
+      color: rgba(242,246,255,.92);
+      margin-top: 18px;
+    }
+    .hook {
+      font-size: 1.05rem;
+      max-width: 70%;
+      line-height: 1.75;
+      color: #ffffff;
+      padding: 22px 26px;
+      background: rgba(12, 23, 40, 0.72);
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    }
+    .hook strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      color: #f2f7ff;
+    }
+    .note {
+      position: absolute;
+      bottom: 26px;
+      left: 72px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,.64);
+      max-width: 68%;
+    }
+  </style>
+</head>
+<body>
+  <div class="post-card">
+    <img src="Fotos Profissional/Gemini_Generated_Image_klujbpklujbpkluj.png" alt="Imagem de fundo para post de loteamento" />
+    <div class="content">
+      <div class="tag">Conteúdo educativo</div>
+      <h1 class="title">Título do post aqui</h1>
+      <p class="subtitle">Subtítulo breve com a mensagem principal sobre o mercado de lotes.</p>
+      <p class="hook"><strong>Chamada principal:</strong> use este campo para convidar a audiência a ler o descritivo completo.</p>
+    </div>
+    <div class="note">Use no feed do Instagram em 1080x1920. Edite o título, subtítulo e chamada conforme o tema.</div>
+  </div>
+</body>
+</html>
